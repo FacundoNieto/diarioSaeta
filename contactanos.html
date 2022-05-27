@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Diario Saeta</title>
+        
+        <!-- Css: -->
+        <link rel="stylesheet" href="css/styles.css">
+        
+        <!-- Ícono de la pestaña -->
+        <link rel="icon" href="images/trofeo.ico">
+    
+        <!-- Íconos de Fontawesome: -->
+        <script src="https://use.fontawesome.com/5d98b586ab.js"></script>
+        
+        <!-- Google Fonts: -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+        
+    </head>
+<body>
+    <header>
+        <nav>
+            <!-- Logo del diario  -->
+            <a href="index.html"> <img src="images/escoba-hp-saeta-de-fuego.jpg" height="120px" width="120px" alt="Logo de La Saeta" id = "img-logo" > </a>
+            
+            <!-- Nombre del diario -->
+            <h1> <a href="index.html" class = "diario" > La Saeta </a></h1>
+
+            <!-- Botón menú hamburguesa -->
+            <input type="checkbox" id="check"> 
+            <label for="check" class="checkbtn">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+
+            <ul>
+                <li><a href="iniciarSesion.html" class = "nav-link">Iniciar Sesión</a></li>
+                <li><a href="suscribirme.html" class = "nav-link">Suscribirme</a></li> <!-- Les doy la clase nav-link para diferenciarlo del título y la imagen en el css-->
+                <li><a href="contactanos.html" class = "nav-link activo">Contáctanos</a></li>
+                <li><a href="index.html" class = "nav-link" id= "portada">Portada</a></li>
+            </ul>
+            
+            
+        </nav>
+    </header>
+
+    <main>
+        <div class = "contactos-container">
+            <section class = "ubicacion">
+                <h2>Contacto | Ubicación</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13902.30804782116!2d-66.8529499177275!3d-29.411927613867487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9427da34bd8eb93f%3A0x9b979568d8913abc!2sDiario%20el%20Independiente!5e0!3m2!1ses!2sar!4v1651958162382!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+            <section class = "tarjetas">
+                <div class = "cont-grid-item1">
+                    <h2>Líneas de contacto</h2>
+                    <p>
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                         Ubicación: 9 de Julio 395. La Rioja, Argentina. CP 5300
+                    </p>
+                    <p>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        Horarios: Lun - Lun: 08:00hs a 12:00hs y 17:00hs a 20:00hs
+                    </p>
+                    <p>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        Recepción: 4-469666
+                    </p>
+                </div>
+                <div class = "cont-grid-item">
+                    <h2>Área periodística</h2>
+                    <p>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        4-469666 / 0380 154684127
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        redacciondigital@lasaeta.com.ar
+                    </p>
+                </div>
+                <div class = "cont-grid-item">
+                    <h2>Redes Sociales</h2>
+                    <div>
+                        <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>                    </div>
+                </div>
+            </section>    
+        </div>
+    </main>
+
+    <footer>
+        <i class="fa fa-twitter " aria-hidden="true"></i>
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+        <br>
+        <p>Copyright @2022</p>
+        <br>
+    </footer>
+</body>
+</html>

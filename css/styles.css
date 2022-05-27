@@ -1,0 +1,501 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* list-style: none; */
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+/****************************************************/
+/*********************HEADER*************************/
+/****************************************************/
+
+nav{
+    background-color: darkblue;
+    display: flex;
+    justify-content: space-between;
+    height: 12rem; /*altura fija para el nav, sirve para centrar el h1 después*/  
+    width: 100%;
+}
+
+nav a img{
+    border-radius: 50%;
+}
+
+.diario{
+    font-family: 'Righteous', 'cursive';
+    line-height: 12rem; /*lo centro verticalmente, le doy a line-height la misma altura que la del nav*/
+    color: white;
+    font-size: 8rem;
+}
+
+.diario:hover{
+    color: none;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    padding: 0; /*le saco el padding que tiene la etiqueta ul por defecto, así se distribuye bien el espacio entre los links, el título y la imagen*/
+    margin-top: .5rem;
+}
+
+nav ul li{
+    margin: 0.8rem;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+.nav-link{
+    padding: 0 2rem;
+    border-radius: .6rem;
+}
+
+nav ul li a:hover{
+    color: rgb(188, 86, 86);
+    transition: .3s;
+}
+
+#portada{
+    display: none;
+}
+
+#check{/*id del input para hacer el menú hamburguesa*/
+    display: none; /*oculto el input en pantallas grandes y medianas*/ 
+} 
+    
+
+
+.checkbtn{ /*estilizo el ícono del menú hamburgesa*/
+    line-height: 12rem; /*lo centro verticalmente, le doy a line-height la misma altura que la del nav*/
+    margin-right: 3rem;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    display:none; /*no lo muestro en pantallas de escritorio*/
+}
+
+/****************************************************/
+/********************FOOTER***********************/
+/****************************************************/
+
+footer{
+    width: 100%;
+    min-height: .7rem;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+footer i{
+    padding: 1rem;
+}
+footer i:hover{
+    cursor: pointer;
+}
+
+/****************************************************/
+/****************INDEX.HTML: CONTENIDO***************/
+/****************************************************/
+
+main{
+    min-width: 70vh;
+    min-height: calc(100vh - 12rem);
+}
+
+.contenido{
+    margin: 2rem;
+    font-size: 2rem;
+    display: grid;
+    grid-template-columns:  80rem 30rem;
+    /* grid-template-rows: repeat(3, 20rem); */
+    gap: 2rem;
+    column-gap: 23rem;
+}
+
+.noticias{
+    display: grid;
+    grid-template-columns: repeat(2,50rem);
+    /* grid-template-rows: repeat(3, 20rem); */
+    gap: 1rem;
+}
+
+/*******************************************/
+/***********CADA NOTICIA POR SEPARADA*******/
+
+.grid-item{
+    height: auto;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.grid-item figure{
+    border: solid gray .1rem;
+    height: 40rem;
+}
+
+.grid-item figure:hover{
+    box-shadow: .7rem 1.3rem 3.7rem black;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.grid-item figure img{
+    width: 100%;
+       
+}
+.grid-item figure figcaption{
+    color: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    padding: 2.5rem 1rem;
+}
+
+/***********************************************/
+/******************ASIDE************************/
+/***********************************************/
+
+.publicidad{
+    height: 40%;
+    display: grid;
+    columns: 1fr;
+}
+
+.pubUno{
+    /* border: solid green; */
+    margin-top: 15rem;
+
+    border-radius: 3rem;
+    height: 49rem;
+    background-image: url('../images/Argentina-vs-Italia-Partido.jpg');
+    background-size: cover;
+    background-position: center center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.pubDos {
+    margin-top: 20rem;
+    border-radius: 3rem;
+    color: #fff;
+    height: 50rem;
+    text-align: center;
+    padding: 2rem;
+    background-image: url('../images/banner.jpg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;   
+    justify-content: space-around;
+}
+.pubUno .boton, .pubDos .boton{
+    background:  #FFA000;
+	display: block;
+	width: 90%;
+	font-weight: bold;
+	font-size: 1.4rem;
+	text-align: center;
+	padding: 10px;
+	border: none;
+	border-radius: 10rem;
+	font-family: 'Roboto', sans-serif;
+	/* cursor: pointer; */
+    margin-bottom: 1rem;
+}
+
+.pubDos .boton { /*le cambio un poco la posición al enlace en la pubDos*/
+	width: 100%;   
+}
+
+.pubUno .boton:visited, .pubDos .boton:visited{
+    text-decoration: none;
+    color: black;
+} 
+.pubUno .boton:hover, .pubDos .boton:hover{
+    color: black;
+    background-color: #FFD600;
+    transition: .3s;
+}
+
+.pubDos ul {
+    margin-top: 10rem;
+    list-style: none;
+}
+
+.pubDos ul li {
+    margin: 1.5rem;
+	font-weight: bold;
+}
+
+/*****************************************/
+/***********PÁGINA CONTÁCTANOS************/
+/*****************************************/
+
+.contactos-container{
+    
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: 60rem 50rem;
+    padding: 1.5rem;
+    gap: 2rem;   
+}
+.ubicacion{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.ubicacion h2{
+    text-decoration: underline;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.tarjetas{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cont-grid-item1{
+    margin-top: 0;
+}
+
+.cont-grid-item1 i, .cont-grid-item i{
+    font-size: 2rem;
+}
+.cont-grid-item1 h2, .cont-grid-item1 p, .cont-grid-item h2, .cont-grid-item p, .cont-grid-item i{
+    padding: 1rem;
+}
+
+.cont-grid-item1 h2, .cont-grid-item h2{
+    font-size: 2.2rem;
+    text-decoration: underline;
+}
+
+.cont-grid-item1 p, .cont-grid-item p{
+    font-size: 1.4rem;
+}
+
+.cont-grid-item{
+    margin: 2rem 0;
+}
+
+
+/****************************************************/
+/****** SUSCRIBIRME.HTML / INICIARSESION.HTML *******/
+/****************************************************/
+
+.form-sus{
+    width: 42.3rem;
+    border: solid;
+    padding: 3rem;
+    margin: auto;
+    margin-top: 7rem;
+    margin-bottom: 10rem;
+    border-radius: .4rem;
+    font-family: 'calibri';
+    box-shadow: .7rem 1.3rem 3.7rem black;
+}
+
+.form-sus h2{
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.form-sus ul{
+    border: solid .05rem;
+    border-radius: 1rem;
+    list-style: none;
+    font-family: 'calibri';
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.form-sus ul li{
+    padding: .5rem;
+}
+
+
+.controls{
+    width: 100%;
+    padding: 1rem;
+    border-radius: .4rem;
+    margin-bottom: 1.6rem;
+    border: .1rem solid;
+    font-family: 'calibri';
+    font-size: 1.8rem;
+}
+
+.form-sus p{
+    /* border: solid; */
+    height: 4rem;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 4rem;
+}
+
+.form-sus a:hover{
+    text-decoration: underline;
+    
+}
+
+.sus-boton{
+    width: 100%;
+    border: none;
+    background: #1f53c5;
+    color: white;
+    padding: 1.2rem;
+    margin: 1.6rem 0;
+    font-size: 1.6rem;
+}
+.sus-boton:hover{
+    background-color: rgb(94, 191, 223);
+    cursor:pointer;
+    transition: .1s;
+}
+
+#recuperar-contraseña{
+    margin-left: 10rem;
+    height: 4rem;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 4rem;
+}
+
+@media screen and (max-width:640px){/*pantallas pequeñas*/
+    
+     nav{
+        position: fixed; /*para que al scrollear hacia abajo del menú se siga viendo el header */
+        top: 0;
+        width: 100%;
+    } 
+    
+    .diario{
+        font-size: 6rem;
+    }
+
+    nav ul{
+        margin-top: 0px;
+        position: fixed; 
+        width: 100%;
+        height: calc(100vh);
+        background-color: rgb(42, 38, 38);
+        top: 12rem; /*para que se ubique debajo de los demás elementos del header*/
+        text-align: center; /*con esto hago que los enlaces queden centrados*/
+        left: -100%; /*escondo el menú a la izquierda de la pantalla cuando no se pulsa el ícono hamburguesa*/
+        transition: all .5s;
+    }
+
+    #portada{
+        display:inline; /*en pantallas chicas sí muestro esta opción en la ul del nav*/
+    }
+    
+    nav ul li{
+        display: block; 
+        margin: 5rem;
+        line-height: 3rem;
+    }
+    nav ul li a{
+        font-size: 2rem;
+    }
+
+    nav ul li a.activo{ 
+        /* background-color: rgb(42, 0, 38); */
+        color: rgb(188, 86, 86);
+        text-decoration: underline;
+    }
+    nav ul li a:hover{
+        color: rgb(188, 86, 86);
+        transition: .3s;
+    }
+    
+    .checkbtn{ /*estilizo el ícono del menú hamburgesa*/
+        display:block; /*sí lo muestro en pantallas chicas*/
+    }
+
+    #check:checked ~ ul{ /*edito la ul del nav cuando se pulse el input (ícono), por eso es que debe usarse "~", */
+        left: 0; /*muestro el menú que estaba escondido a la izquierda*/
+    }
+    
+     main{
+        margin-top: 14rem;  /*para que las noticias queden debajo del header*/
+    }    
+    
+    .contenido{
+        margin: 2rem;
+        font-size: 2rem;
+        display: grid;
+        grid-template-columns: 45rem ;
+        grid-template-rows: auto auto;
+        gap: 2rem;
+    }
+    .noticias{
+        /* border: 2px dotted green; */
+        display: grid;
+        grid-template-columns: 1fr;
+        /* grid-template-rows: repeat(3, 20rem); */
+        gap: 1rem;
+    }
+
+    .pubDos{
+        margin-top: 10rem;
+    }
+}
+
+/***************Pantallas Medianas**************/
+
+@media screen and (max-width:1024px) and (min-width:640px){/*pantallas medianas */
+    .diario{
+        font-size: 7rem;
+    }
+
+    .contenido{
+        margin: 2rem;
+        font-size: 2rem;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto auto;
+        gap: 2rem;
+    }
+    .noticias{
+        display: grid;
+        grid-template-columns: repeat(2,42rem);
+        /* grid-template-rows: repeat(3, 20rem); */
+        gap: 1rem;
+    }
+
+    .grid-item figure{
+        height: 37rem;
+    }
+
+    .pubUno, .pubDos{
+        width: 90%;
+    }
+
+    .pubUno, .pubDos{
+        margin-top: 10rem;
+    }
+
+} 
+
+/* @media screen and (min-width:1024px){} /*pantallas grandes*/
